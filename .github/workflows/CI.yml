@@ -59,9 +59,3 @@ jobs:
             build-essential debhelper dpkg-dev fakeroot asciidoc-base xmlto pkg-config
           bash tests/test_deb_build.sh
         timeout-minutes: 10
-
-      - name: Upload
-        uses: actions/upload-artifact@main
-        with:
-          name: shadowsocks-libev-${{ matrix.os }}
-          path: shadowsocks-libev
